@@ -36,11 +36,11 @@ func (nums *numbers) length() int {
 // If the resulting array has single argument and it is a number - returns it, else - returns error.
 // If there are more than one elements in the array, then each element is evaluated:
 // if it is a number, it is pushed to a stack; if it is not, the program assumes that it is an operator
-// and will try to count result of two last elements of the stack. In the end, CountPostfix should return 
+// and will try to count result of two last elements of the stack. In the end, CountPostfix should return
 // a string, which is the result of the evaluation of the entire expression, or an error.
-// Error types: "Wrong form of expression! Postfix notation must be used!" - occurs when the only element of 
+// Error types: "Wrong form of expression! Postfix notation must be used!" - occurs when the only element of
 // the split string array is not a number, when there is overusage or underusage of operators.
-// "Operation can not be performed on the arguments: <operation type>" - occurs when it is requested to 
+// "Operation can not be performed on the arguments: <operation type>" - occurs when it is requested to
 // perform an operationon two arguments which is not possible
 func CountPostfix(input string) (string, error) {
 	args := strings.Split(input, " ")

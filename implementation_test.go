@@ -113,7 +113,7 @@ func (s *MySuite) TestCountPostfixOperandComplexity10_1(c *gocheck.C) {
 	c.Assert(res, gocheck.Equals, expected)
 }
 
-func (s * MySuite) TestCountPostfixWrongInput_1(c *gocheck.C) {
+func (s *MySuite) TestCountPostfixWrongInput_1(c *gocheck.C) {
 	var input = "a" // there is only 2 argument and it is not a number, so it can not be result
 	var expectedRes = ""
 	var expectedErr = "Невірна форма запису виразу! Має використовуватись постфіксна форма!"
@@ -122,7 +122,7 @@ func (s * MySuite) TestCountPostfixWrongInput_1(c *gocheck.C) {
 	c.Assert(err, gocheck.ErrorMatches, expectedErr)
 }
 
-func (s * MySuite) TestCountPostfixWrongInput_2(c *gocheck.C) {
+func (s *MySuite) TestCountPostfixWrongInput_2(c *gocheck.C) {
 	var input = "3 +" // there is not enough arguments to count, so it counts as a postfix notation violation
 	var expectedRes = ""
 	var expectedErr = "Невірна форма запису виразу! Має використовуватись постфіксна форма!"
@@ -131,7 +131,7 @@ func (s * MySuite) TestCountPostfixWrongInput_2(c *gocheck.C) {
 	c.Assert(err, gocheck.ErrorMatches, expectedErr)
 }
 
-func (s * MySuite) TestCountPostfixWrongInput_3(c *gocheck.C) {
+func (s *MySuite) TestCountPostfixWrongInput_3(c *gocheck.C) {
 	var input = "4 3 2 +" // there are not enough operators to process all the operands, so the notation is violated
 	var expectedRes = ""
 	var expectedErr = "Невірна форма запису виразу! Має використовуватись постфіксна форма!"
@@ -140,7 +140,7 @@ func (s * MySuite) TestCountPostfixWrongInput_3(c *gocheck.C) {
 	c.Assert(err, gocheck.ErrorMatches, expectedErr)
 }
 
-func (s * MySuite) TestCountPostfixWrongInput_4(c *gocheck.C) {
+func (s *MySuite) TestCountPostfixWrongInput_4(c *gocheck.C) {
 	var input = "7 a" // though the operator is wrong, there are not enough arguments to count result, so the notation is violated
 	var expectedRes = ""
 	var expectedErr = "Невірна форма запису виразу! Має використовуватись постфіксна форма!"
@@ -149,7 +149,7 @@ func (s * MySuite) TestCountPostfixWrongInput_4(c *gocheck.C) {
 	c.Assert(err, gocheck.ErrorMatches, expectedErr)
 }
 
-func (s * MySuite) TestCountPostfixWrongOperator_1(c *gocheck.C) {
+func (s *MySuite) TestCountPostfixWrongOperator_1(c *gocheck.C) {
 	var input = "4 3 a" // there is no operator a, so the expression could not be counted
 	var expectedRes = ""
 	var expectedErr = "Виконати дану операцію над аргументами неможливо: a!"
