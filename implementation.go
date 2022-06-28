@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"math"
 )
 
 var errorMessages = map[string]string {
@@ -95,6 +96,8 @@ func performOperation(a, b int, operation string) (int, error) {
 		b *= a
 	case "/":
 		b /= a
+	case "^":
+		b = int(math.Pow(float64(b), float64(a)))
 	default:
 		return 0, fmt.Errorf("%s %s!", errorMessages["wrongOperation"], operation)
 	}
