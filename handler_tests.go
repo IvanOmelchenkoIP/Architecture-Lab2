@@ -95,7 +95,7 @@ func (s *MySuite) TestComputeWrongInput_4(c *gocheck.C) {
 
 func (s *MySuite) TestComputeWrongOperator_1(c *gocheck.C) {
 	var input = "4 5 #" // there is no operator a, so the expression could not be counted
-	var expectedErr = "Виконати дану операцію над аргументами неможливо: a!"
+	var expectedErr = "Виконати дану операцію над аргументами неможливо: #!"
 	var out bytes.Buffer
 	handler := &ComputeHandler{
 		Input: strings.NewReader(input),
