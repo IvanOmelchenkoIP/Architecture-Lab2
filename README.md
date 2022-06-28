@@ -6,7 +6,11 @@
 
 ## Вибір завдання за варіантом
 
-Варіант згідно команди */team-variant 2* - **14**. Максимальний варіант завдання - 12, отже: *14 mod 12 = 2* варіант.
+Варіант згідно команди */team-variant 2* - **14**.
+
+![variant](//markdown_files//variant.PNG)
+
+ Максимальний варіант завдання - 12, отже: *14 mod 12 = 2* варіант.
 
 **Завдання згідно до варіанту:**
 
@@ -17,3 +21,11 @@
 ## Залежності
 
 [Посилання на gocheck](https://github.com/go-check/check.git)
+
+[Посилання на godoc](https://pkg.go.dev/golang.org/x/tools/cmd/godoc)
+
+## Godoc
+
+Перевірка коментарів до функції CountPostfix та тестів ExampleCountPostfix при запуску godoc
+
+[variant](//markdown_files//godoc.PNG)
