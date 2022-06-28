@@ -159,8 +159,13 @@ func (s * MySuite) TestCountPostfixWrongOperator_1(c *gocheck.C) {
 }
 
 func ExampleCountPostfix() {
-	res, _ := CountPostfix("2 2 + 4 2 * 3 - +")
-	fmt.Println(res)
+	var input = "2 2 + 4 2 * 3 - +"
+	res, err := CountPostfix(input)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(res)
+	}
 
 	// Output:
 	// 9
