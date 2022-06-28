@@ -8,7 +8,7 @@
 
 Варіант згідно команди */team-variant 2* - **14**.
 
-![variant](//markdown_files//variant.PNG)
+![variant](https://github.com/IvanOmelchenkoIP/Architecture-Lab2/blob/master/markdown_files/variant.PNG)
 
  Максимальний варіант завдання - 12, отже: *14 mod 12 = 2* варіант.
 
@@ -28,4 +28,4 @@
 
 Перевірка коментарів до функції CountPostfix та тестів ExampleCountPostfix при запуску godoc
 
-[variant](//markdown_files//godoc.PNG)
+[variant](https://github.com/IvanOmelchenkoIP/Architecture-Lab2/blob/master/markdown_files/godoc.PNG)
