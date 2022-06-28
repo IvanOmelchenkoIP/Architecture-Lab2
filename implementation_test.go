@@ -9,10 +9,6 @@ import (
 
 func Test(t *testing.T) { gocheck.TestingT(t) }
 
-type MySuite struct{}
-
-var _ = gocheck.Suite(&MySuite{})
-
 func (s *MySuite) TestCountPostfixOperandComplexity1_1(c *gocheck.C) {
 	var input = "2" // 2 = 2
 	var expected = "2"
@@ -114,7 +110,7 @@ func (s *MySuite) TestCountPostfixOperandComplexity10_1(c *gocheck.C) {
 }
 
 func (s *MySuite) TestCountPostfixWrongInput_1(c *gocheck.C) {
-	var input = "a" // there is only 2 argument and it is not a number, so it can not be result
+	var input = "a" // there is only 1 argument and it is not a number, so it can not be result
 	var expectedRes = ""
 	var expectedErr = "Невірна форма запису виразу! Має використовуватись постфіксна форма!"
 	res, err := CountPostfix(input)
