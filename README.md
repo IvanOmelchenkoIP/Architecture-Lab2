@@ -28,4 +28,4 @@
 
 Перевірка коментарів до функції CountPostfix та тестів ExampleCountPostfix при запуску godoc
 
-[variant](https://github.com/IvanOmelchenkoIP/Architecture-Lab2/blob/master/markdown_files/godoc.PNG)
+![godoc](https://github.com/IvanOmelchenkoIP/Architecture-Lab2/blob/master/markdown_files/godoc.PNG)
