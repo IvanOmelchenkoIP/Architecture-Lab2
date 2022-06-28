@@ -14,10 +14,10 @@ func TestPrefixToPostfix(t *testing.T) {
 	}
 }
 
-func ExamplePrefixToPostfix() {
-	res, _ := CountPostfix("+ 2 2")
+func ExampleCountPostfix() {
+	res, _ := CountPostfix("2 2 + 4 2 * 3 - +")
 	fmt.Println(res)
 
 	// Output:
-	// 2 2 +
+	// 9
 }
