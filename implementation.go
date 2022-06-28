@@ -2,12 +2,12 @@ package lab2
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 	"strings"
-	"math"
 )
 
-var errorMessages = map[string]string {
+var errorMessages = map[string]string{
 	"wrongInputForm": "Невірна форма запису виразу! Має використовуватись постфіксна форма!",
 	"wrongOperation": "Виконати дану операцію над аргументами неможливо:",
 }
@@ -44,7 +44,7 @@ func CountPostfix(input string) (string, error) {
 		return number, nil
 	}
 
-	numbers := Numbers{ stack: make([]int, 0) }
+	numbers := Numbers{stack: make([]int, 0)}
 	for _, val := range args {
 		num, err := strconv.Atoi(val)
 		if err != nil {
@@ -73,14 +73,14 @@ func processNumArg(numbers Numbers, num int) Numbers {
 
 func processOperArg(numbers Numbers, operation string) (Numbers, error) {
 	if numbers.length() < 2 {
-		return Numbers{ stack: make([]int, 0) }, fmt.Errorf(errorMessages["wrongInputForm"])
+		return Numbers{stack: make([]int, 0)}, fmt.Errorf(errorMessages["wrongInputForm"])
 	}
 
 	a := numbers.pop()
 	b := numbers.pop()
 	res, err := performOperation(a, b, operation)
 	if err != nil {
-		return Numbers{ stack: make([]int, 0) }, err
+		return Numbers{stack: make([]int, 0)}, err
 	}
 	numbers.push(res)
 	return numbers, nil
